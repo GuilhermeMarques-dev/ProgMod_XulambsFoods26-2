@@ -16,5 +16,25 @@ public class PizzaTest {
         //Assert
         assertEquals(4, quantos);
     }
+
+    @Test 
+    public void testePodeAdicionarQuant(){
+        Pizza pizza = new Pizza();
+        int quantidadeIngredientes =
+            pizza.adicionarIngredientes(10);
+
+        assertEquals(0, quantidadeIngredientes);
+    }    
+
     
+    @Test 
+    public void testeCriacaoValorFinal(){
+        Pizza pizza = new Pizza();
+        pizza.adicionarIngredientes(4);
+        double valorFinal = pizza.valorFinal();
+
+        assertEquals(49, valorFinal,0.01);
+
+    }
 }
+    
